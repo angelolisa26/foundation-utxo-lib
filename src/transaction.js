@@ -263,6 +263,19 @@ Transaction.prototype.addInput = function (hash, index, sequence, scriptSig) {
   }) - 1)
 }
 
+Transaction.prototype.addPoolOutput = function (scriptPubKey, value) {
+  typeforce(types.tuple(types.Buffer, types.Satoshi), arguments)
+
+  // Add output to beginning of output array
+  this.outs.unshift({
+    script: scriptPubKey,
+    value: value
+  });
+
+  // Return main index
+  return 0;
+}
+
 Transaction.prototype.addOutput = function (scriptPubKey, value) {
   typeforce(types.tuple(types.Buffer, types.Satoshi), arguments)
 

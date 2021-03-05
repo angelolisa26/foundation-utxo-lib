@@ -723,6 +723,19 @@ TransactionBuilder.prototype.__addInputUnsafe = function (txHash, vout, options)
   return vin
 }
 
+TransactionBuilder.prototype.addPoolOutput = function (scriptPubKey, value) {
+  if (!this.__canModifyOutputs()) {
+    throw new Error('No, this would invalidate signatures')
+  }
+
+  // Attempt to get a script if it's a base58 address string
+  if (typeof scriptPubKey === 'string') {
+    scriptPubKey = baddress.toOutputScript(scriptPubKey, this.network)
+  }
+
+  return this.tx.addPoolOutput(scriptPubKey, value)
+}
+
 TransactionBuilder.prototype.addOutput = function (scriptPubKey, value) {
   if (!this.__canModifyOutputs()) {
     throw new Error('No, this would invalidate signatures')
