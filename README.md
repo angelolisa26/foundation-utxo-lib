@@ -1,6 +1,6 @@
 # Blinkhash UTXO Library
 
-[![Build Status](https://travis-ci.org/blinkhash/blinkhash-utxo-lib.svg?branch=master)](https://travis-ci.org/blinkhash/blinkhash-utxo-lib)
+[![Build Status](https://travis-ci.com/blinkhash/blinkhash-utxo-lib.svg?branch=master)](https://travis-ci.com/blinkhash/blinkhash-utxo-lib)
 [![License: MIT](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/blinkhash-utxo-lib.svg)](https://www.npmjs.com/package/blinkhash-utxo-lib)
 [![Version](https://img.shields.io/npm/v/blinkhash-utxo-lib.svg)](https://www.npmjs.com/package/blinkhash-utxo-lib)

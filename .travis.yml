@@ -1,4 +1,3 @@
-sudo: false
 language: node_js
 node_js:
   - "6"
@@ -6,23 +5,24 @@ node_js:
   - "8"
   - "9"
   - "10"
-
+  - "11"
+  - "12"
+os: "linux"
+dist: "xenial"
 env:
   global:
     - BLINKHASH_UTXO_LIB_TEST_SKIP_3PBP=1
   jobs:
     - TEST_SUITE=standard
     - TEST_SUITE=coverage
-
-matrix:
+jobs:
   include:
-    - node_js: "7"
-      env: TEST_SUITE=standard
-    - node_js: "7"
-      env: TEST_SUITE=coverage
-
-install: npm install && npm install -g codecov
-script:
-  - npm run-script $TEST_SUITE
-  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
-  - codecov
+    - stage: test
+      install: npm install
+      script: npm run-script $TEST_SUITE
+    - stage: coverage
+      node_js: 12.16
+      script:
+        - npm run-script coverage
+        - npm run coverage-report
+        - codecov
