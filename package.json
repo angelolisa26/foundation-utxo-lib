@@ -1,11 +1,8 @@
 {
-  "name": "@bitgo/utxo-lib",
-  "version": "1.9.1",
+  "name": "blinkhash-utxo-lib",
+  "version": "0.0.1",
   "description": "Client-side Bitcoin JavaScript library",
   "main": "./src/index.js",
-  "engines": {
-    "node": ">=4.0.0"
-  },
   "keywords": [
     "bitgo",
     "utxo",
@@ -16,18 +13,27 @@
     "browserify",
     "javascript"
   ],
+  "homepage": "https://github.com/blinkhash/blinkhash-utxo-lib",
+  "bugs": {
+      "url": "https://github.com/blinkhash/blinkhash-utxo-lib/issues"
+  },
+  "license": "MIT",
+  "author": {
+      "name": "Nick Sarris"
+  },
   "scripts": {
     "coverage-report": "nyc report --reporter=lcov",
     "coverage-html": "nyc report --reporter=html",
-    "coverage": "BITGO_UTXO_LIB_TEST_EXPECTED_COUNT=3442 nyc --check-coverage --branches 90 --functions 90 mocha --recursive",
+    "coverage": "BLINKHASH_UTXO_LIB_TEST_EXPECTED_COUNT=3439 nyc --check-coverage --branches 90 --functions 90 mocha --recursive",
     "integration": "mocha test/integration/",
     "standard": "standard",
     "test": "npm run standard && npm run coverage",
     "unit": "mocha"
   },
+  "contributors": [],
   "repository": {
-    "type": "git",
-    "url": "https://github.com/BitGo/bitgo-utxo-lib.git"
+      "type": "git",
+      "url": "https://github.com/blinkhash/blinkhash-utxo-lib.git"
   },
   "files": [
     "src"
@@ -63,8 +69,11 @@
     "sinon": "^1.12.2",
     "standard": "^9.0.2"
   },
-  "license": "MIT",
   "optionalDependencies": {
     "secp256k1": "^3.5.2"
-  }
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "readmeFilename": "README.md"
 }

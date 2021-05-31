@@ -9,7 +9,7 @@ node_js:
 
 env:
   global:
-    - BITGO_UTXO_LIB_TEST_SKIP_3PBP=1 # BLOCK-253
+    - BLINKHASH_UTXO_LIB_TEST_SKIP_3PBP=1
   jobs:
     - TEST_SUITE=standard
     - TEST_SUITE=coverage
@@ -21,5 +21,8 @@ matrix:
     - node_js: "7"
       env: TEST_SUITE=coverage
 
+install: npm install && npm install -g codecov
 script:
   - npm run-script $TEST_SUITE
+  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
+  - codecov

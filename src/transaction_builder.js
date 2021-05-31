@@ -658,10 +658,9 @@ TransactionBuilder.prototype.addInput = function (txHash, vout, sequence, prevOu
   if (Transaction.isCoinbaseHash(txHash)) {
     return this.__addInputUnsafe(txHash, vout, {
       sequence: sequence,
-      scriptSig: prevOutScript,
+      scriptSig: prevOutScript
     })
-  }
-  else {
+  } else {
     return this.__addInputUnsafe(txHash, vout, {
       sequence: sequence,
       prevOutScript: prevOutScript,
@@ -672,17 +671,18 @@ TransactionBuilder.prototype.addInput = function (txHash, vout, sequence, prevOu
 
 TransactionBuilder.prototype.__addInputUnsafe = function (txHash, vout, options) {
   var input = {}
+  var vin
 
   if (Transaction.isCoinbaseHash(txHash)) {
-    var vin = this.tx.addInput(txHash, vout, options.sequence, options.scriptSig)
+    vin = this.tx.addInput(txHash, vout, options.sequence, options.scriptSig)
     input = {
       pubKeys: [],
       signatures: [],
-      signScript: options.scriptSig,
+      signScript: options.scriptSig
     }
     this.inputs[vin] = input
-    //throw new Error('coinbase inputs not supported')
-    return 0;
+    // throw new Error('coinbase inputs not supported')
+    return 0
   }
 
   var prevTxOut = txHash.toString('hex') + ':' + vout
@@ -717,7 +717,7 @@ TransactionBuilder.prototype.__addInputUnsafe = function (txHash, vout, options)
     input.prevOutType = prevOutType || btemplates.classifyOutput(options.prevOutScript)
   }
 
-  var vin = this.tx.addInput(txHash, vout, options.sequence, options.scriptSig)
+  vin = this.tx.addInput(txHash, vout, options.sequence, options.scriptSig)
   this.inputs[vin] = input
   this.prevTxMap[prevTxOut] = vin
   return vin
@@ -763,9 +763,10 @@ TransactionBuilder.prototype.__build = function (allowIncomplete) {
   }
 
   var tx = this.tx.clone()
-  if (Transaction.isCoinbaseHash(tx.ins[0].hash))
-  {
-    return tx;
+  if (tx.ins.length >= 1) {
+    if (Transaction.isCoinbaseHash(tx.ins[0].hash)) {
+      return tx
+    }
   }
 
   // Create script signatures from inputs

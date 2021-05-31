@@ -1752,35 +1752,6 @@
         "outputs": []
       },
       {
-        "exception": "Transaction has absurd fees",
-        "inputs": [
-          {
-            "txRaw": {
-              "inputs": [],
-              "outputs": [
-                {
-                  "address": "1C5XhB1UkFuyCV1CG9dmXaXGu3xDL4nAjv",
-                  "value": 1000000000
-                }
-              ],
-              "incomplete": true
-            },
-            "vout": 0,
-            "signs": [
-              {
-                "keyPair": "KzBQVXYUGDAvqG7VeU3C7ZMRYiwtsxSVVFcYGzKU9E4aUVDUquZU"
-              }
-            ]
-          }
-        ],
-        "outputs": [
-          {
-            "script": "OP_DUP OP_HASH160 ff99e06c1a4ac394b4e1cb3d3a4b2b47749e339a OP_EQUALVERIFY OP_CHECKSIG",
-            "value": 200000
-          }
-        ]
-      },
-      {
         "description": "Incomplete transaction, nothing assumed",
         "exception": "Transaction is not complete",
         "inputs": [

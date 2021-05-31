@@ -270,10 +270,10 @@ Transaction.prototype.addPoolOutput = function (scriptPubKey, value) {
   this.outs.unshift({
     script: scriptPubKey,
     value: value
-  });
+  })
 
   // Return main index
-  return 0;
+  return 0
 }
 
 Transaction.prototype.addOutput = function (scriptPubKey, value) {

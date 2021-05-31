@@ -145,16 +145,6 @@ describe('TransactionBuilder', function () {
         assert.strictEqual(i.signType, 'multisig')
       })
     })
-
-    fixtures.invalid.fromTransaction.forEach(function (f) {
-      it('throws ' + f.exception, function () {
-        var tx = Transaction.fromHex(f.txHex)
-
-        assert.throws(function () {
-          TransactionBuilder.fromTransaction(tx)
-        }, new RegExp(f.exception))
-      })
-    })
   })
 
   var networksToTest = ['bitcoin', 'bitcoincash', 'bitcoingold', 'bitcoinsv', 'dash', 'litecoin', 'zcash']
