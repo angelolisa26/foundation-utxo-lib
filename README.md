@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/blinkhash-utxo-lib.svg)](https://www.npmjs.com/package/blinkhash-utxo-lib)
 [![Version](https://img.shields.io/npm/v/blinkhash-utxo-lib.svg)](https://www.npmjs.com/package/blinkhash-utxo-lib)
+[![Known Vulnerabilities](https://snyk.io/test/npm/blinkhash-utxo-lib/badge.svg)](https://snyk.io/test/npm/blinkhash-utxo-lib)
 [![Discord](https://img.shields.io/discord/738590795384356904)](https://discord.gg/8xtHZFKJQY)
 
 This repository was originally a fork of [bitcoinjs-lib](https://github.com/BitGo/bitcoinjs-lib), but has since been built out to support the transaction building process of UTXO based coins other than just Bitcoin.
