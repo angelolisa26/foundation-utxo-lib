@@ -1,6 +1,6 @@
 {
   "name": "blinkhash-utxo-lib",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Client-side Bitcoin JavaScript library",
   "main": "./src/index.js",
   "keywords": [

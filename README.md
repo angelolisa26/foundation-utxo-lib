@@ -1,7 +1,7 @@
 # Blinkhash UTXO Library
 
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/blinkhash/blinkhash-utxo-lib.svg?style=flat-square)](https://codecov.io/gh/blinkhash/blinkhash-utxo-lib/)
-[![Build Status](https://travis-ci.com/blinkhash/blinkhash-utxo-lib.svg?branch=master)](https://travis-ci.com/blinkhash/blinkhash-utxo-lib)
+[![Blinkhash CI](https://github.com/blinkhash/blinkhash-utxo-lib/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/blinkhash/blinkhash-utxo-lib/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/blinkhash-utxo-lib.svg)](https://www.npmjs.com/package/blinkhash-utxo-lib)
 [![Version](https://img.shields.io/npm/v/blinkhash-utxo-lib.svg)](https://www.npmjs.com/package/blinkhash-utxo-lib)

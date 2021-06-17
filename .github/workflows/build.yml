@@ -1,0 +1,38 @@
+name: Blinkhash CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      BLINKHASH_UTXO_LIB_TEST_SKIP_3PBP: 1
+    strategy:
+      matrix:
+        node-version: [11.x, 12.x, 13.x, 14.x, 15.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run-script standard
+  coverage:
+    runs-on: ubuntu-latest
+    env:
+      BLINKHASH_UTXO_LIB_TEST_SKIP_3PBP: 1
+    steps:
+      - uses: actions/checkout@v2
+      - name: Save Coverage Checks
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.16
+      - run: npm install && npm install -g codecov
+      - run: npm run-script coverage
+      - run: npm run coverage-report
+      - run: codecov
