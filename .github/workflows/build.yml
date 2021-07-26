@@ -1,4 +1,4 @@
-name: Blinkhash CI
+name: Foundation CI
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      BLINKHASH_UTXO_LIB_TEST_SKIP_3PBP: 1
+      FOUNDATION_UTXO_LIB_TEST_SKIP_3PBP: 1
     strategy:
       matrix:
         node-version: [11.x, 12.x, 13.x, 14.x, 15.x]
@@ -25,7 +25,7 @@ jobs:
   coverage:
     runs-on: ubuntu-latest
     env:
-      BLINKHASH_UTXO_LIB_TEST_SKIP_3PBP: 1
+      FOUNDATION_UTXO_LIB_TEST_SKIP_3PBP: 1
     steps:
       - uses: actions/checkout@v2
       - name: Save Coverage Checks

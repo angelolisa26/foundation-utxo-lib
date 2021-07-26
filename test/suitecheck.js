@@ -29,7 +29,7 @@ describe('Test Suite', function () {
 
     const testCount = countSuiteTests(rootSuite)
 
-    const expectedCount = process.env.BLINKHASH_UTXO_LIB_TEST_EXPECTED_COUNT
+    const expectedCount = process.env.FOUNDATION_UTXO_LIB_TEST_EXPECTED_COUNT
     if (expectedCount !== undefined) {
       assert.strictEqual(testCount, Number(expectedCount))
     } else {

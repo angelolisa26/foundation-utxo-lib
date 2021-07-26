@@ -98,7 +98,7 @@ describe('bitcoinjs-lib (addresses)', function () {
   })
 
   it('can support the retrieval of transactions for an address (via 3PBP)', function (done) {
-    if (process.env.BLINKHASH_UTXO_LIB_TEST_SKIP_3PBP === '1') {
+    if (process.env.FOUNDATION_UTXO_LIB_TEST_SKIP_3PBP === '1') {
       console.warn(`BLOCK-253 - skip test because we can get rate limited by Cloudflare`)
       this.skip()
       return done()
