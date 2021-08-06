@@ -2,7 +2,7 @@
 
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/blinkhash/foundation-utxo-lib.svg?style=flat-square)](https://codecov.io/gh/blinkhash/foundation-utxo-lib/)
 [![Foundation CI](https://github.com/blinkhash/foundation-utxo-lib/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/blinkhash/foundation-utxo-lib/actions/workflows/build.yml)
-[![License: MIT](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/foundation-utxo-lib.svg)](https://www.npmjs.com/package/foundation-utxo-lib)
 [![Version](https://img.shields.io/npm/v/foundation-utxo-lib.svg)](https://www.npmjs.com/package/foundation-utxo-lib)
 [![Known Vulnerabilities](https://snyk.io/test/npm/foundation-utxo-lib/badge.svg)](https://snyk.io/test/npm/foundation-utxo-lib)
