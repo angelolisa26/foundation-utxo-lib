@@ -6,13 +6,13 @@
 [![Downloads](https://img.shields.io/npm/dm/foundation-utxo-lib.svg)](https://www.npmjs.com/package/foundation-utxo-lib)
 [![Version](https://img.shields.io/npm/v/foundation-utxo-lib.svg)](https://www.npmjs.com/package/foundation-utxo-lib)
 [![Known Vulnerabilities](https://snyk.io/test/npm/foundation-utxo-lib/badge.svg)](https://snyk.io/test/npm/foundation-utxo-lib)
-[![Discord](https://img.shields.io/discord/738590795384356904)](https://discord.gg/8xtHZFKJQY)
+[![Discord](https://img.shields.io/discord/738590795384356904)](https://discord.gg/rNjez6VgNF)
 
 This repository was originally a fork of [bitcoinjs-lib](https://github.com/BitGo/bitcoinjs-lib), but has since been built out to support the transaction building process of UTXO based coins other than just Bitcoin.
 
 #### Need Support?
 
-If you need help with a code-related matter, the first place to look is our [Discord](https://discord.gg/8xtHZFKJQY), where the developers will be available to answer any questions. However, please do not come to me with issues regarding setup. Use Google and the existing documentation for that.
+If you need help with a code-related matter, the first place to look is our [Discord](https://discord.gg/rNjez6VgNF), where the developers will be available to answer any questions. However, please do not come to me with issues regarding setup. Use Google and the existing documentation for that.
 
 ---
 
